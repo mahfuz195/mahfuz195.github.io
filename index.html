@@ -417,6 +417,54 @@
     max-width: 360px;
   }
 
+
+  /* ── NEWS ── */
+  #news { background: var(--white); }
+  .news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .news-card {
+    border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden; text-decoration: none; color: var(--text);
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: var(--bg);
+  }
+  .news-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .news-card-banner {
+    padding: 1.2rem 1.5rem 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .news-source-logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.3rem 0.7rem; border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .logo-nae { background: #003087; color: #fff; }
+  .logo-sc { background: #782F40; color: #fff; }
+  .news-date { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+  .news-card-body { padding: 1.3rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .news-card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem; color: var(--navy); line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+  .news-card-desc { font-size: 0.87rem; color: #4b5563; line-height: 1.6; flex: 1; }
+  .news-card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1.2rem; padding-top: 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+  .news-card-author { font-size: 0.78rem; color: var(--muted); }
+  .news-card-author strong { color: var(--navy); }
+  .news-read-more {
+    font-size: 0.78rem; font-weight: 600; color: var(--accent);
+    display: flex; align-items: center; gap: 0.3rem;
+  }
+  .news-read-more::after { content: '→'; }
+  @media (max-width: 900px) { .news-grid { grid-template-columns: 1fr; } }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -457,6 +505,7 @@
     <a href="#publications">Publications</a>
     <a href="#patents">Patents</a>
     <a href="#awards">Awards</a>
+    <a href="#news">News</a>
     <a href="#teaching">Teaching</a>
     <a href="#contact">Contact</a>
   </div>
@@ -800,6 +849,48 @@
         <div class="award-org">Bangladesh National Competition · 1st Place 2012, Runner-Up IIT Bombay 2013</div>
         <div class="award-year">2012–2013</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NEWS -->
+<section id="news">
+  <div class="container">
+    <div class="section-label">Press & Media</div>
+    <h2>In the News</h2>
+    <div class="news-grid">
+
+      <a href="https://www.nae.edu/216540/Security-of-Connected-and-Automated-Vehicles" target="_blank" class="news-card">
+        <div class="news-card-banner">
+          <span class="news-source-logo logo-nae">NAE · The Bridge</span>
+          <span class="news-date">September 19, 2019 · Vol. 49, Issue 3</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-title">Security of Connected and Automated Vehicles</div>
+          <div class="news-card-desc">Published in <em>The Bridge</em>, the flagship journal of the National Academy of Engineering. The article examines cyberattack surfaces and security vulnerabilities across connected and automated vehicle cyber-physical systems, and outlines detection and mitigation strategies leveraging AI, SDN, edge computing, blockchain, and quantum cryptography.</div>
+          <div class="news-card-footer">
+            <div class="news-card-author">By <strong>M. Chowdhury, M. Islam &amp; Z. Khan</strong> · Clemson University / C2M2</div>
+            <span class="news-read-more">Read</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.southcarolinamanufacturing.com/protecting-self-driving-vehicles-from-cyberattacks/" target="_blank" class="news-card">
+        <div class="news-card-banner">
+          <span class="news-source-logo logo-sc">SC Manufacturing</span>
+          <span class="news-date">March 10, 2020</span>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-title">Protecting Self-Driving Vehicles from Cyberattacks</div>
+          <div class="news-card-desc">Featured in <em>Manufacturing in South Carolina</em> — a Clemson Connection story covering the C2M2 lab's research on securing autonomous vehicles against GPS spoofing, malware, and V2I network attacks. Quotes Mhafuzul Islam directly: <em>"The technology will save lives. My ultimate vision is to reduce that number through technology so that my work will have an impact on the future."</em></div>
+          <div class="news-card-footer">
+            <div class="news-card-author">Featuring <strong>Mhafuzul Islam</strong> · Clemson University / C2M2</div>
+            <span class="news-read-more">Read</span>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
