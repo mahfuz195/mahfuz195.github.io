@@ -190,6 +190,8 @@
     color: #374151; margin-bottom: 1rem; font-size: 1rem;
   }
   .interests-block { margin-top: 1.5rem; }
+  @media (min-width: 901px) { .interests-block { display: none; } }
+  @media (max-width: 900px) { .info-card.interests-sidebar { display: none; } }
   .interests-block h3 {
     font-size: 0.75rem; font-weight: 600; color: var(--navy);
     text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;
@@ -584,6 +586,55 @@
   }
   .funding-partners strong { color: var(--navy); font-style: normal; }
 
+
+  /* ── RESEARCH INTERESTS CARD ── */
+  .research-interests-card {
+    background: linear-gradient(135deg, #0f2342 0%, #1a3a6b 100%);
+    border-radius: 10px;
+    padding: 1.3rem;
+    border: none;
+    margin-top: 0;
+  }
+  .ri-header {
+    display: flex; align-items: center; gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .ri-icon {
+    color: #e8601c; font-size: 1rem; line-height: 1;
+  }
+  .ri-title {
+    font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.65);
+  }
+  .ri-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .ri-tag {
+    font-size: 0.76rem; font-weight: 500;
+    padding: 0.28rem 0.7rem;
+    border-radius: 20px;
+    letter-spacing: 0.01em;
+    transition: transform 0.15s;
+    cursor: default;
+  }
+  .ri-tag:hover { transform: translateY(-1px); }
+  .ri-tag-blue {
+    background: rgba(46,117,182,0.35);
+    color: #93c5fd;
+    border: 1px solid rgba(96,165,250,0.3);
+  }
+  .ri-tag-navy {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .ri-tag-orange {
+    background: rgba(46,117,182,0.35);
+    color: #93c5fd;
+    border: 1px solid rgba(96,165,250,0.3);
+  }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -740,21 +791,7 @@
         <p>I am a researcher and engineer with 6+ years of experience across autonomous vehicles, robotic perception, sensor fusion, motion planning, and embedded systems. My research bridges the gap between deep learning theory and real-world deployment on physical robotic platforms.</p>
         <p>My doctoral work at Clemson University focused on vision-based navigation for autonomous vehicles and cybersecurity for connected vehicle infrastructure. Since then, I have worked across the full AV stack at General Motors R&D and Defense, MicroVision, and Imec USA R&D — filing 18+ patents and publishing in IEEE T-ITS, IEEE TVT, IEEE Access, and top transportation venues.</p>
         <p>I am passionate about STEM education and have designed K-12 courses in Python programming, autonomous vehicle simulation, and robotics — supported by the U.S. DOT Center for Connected Multimodal Mobility.</p>
-        <div class="interests-block">
-          <h3>Research Interests</h3>
-          <div class="tag-cloud">
-            <span class="tag">Machine Learning &amp; Artificial Intelligence</span>
-            <span class="tag">Connected and Automated Vehicles</span>
-            <span class="tag">Autonomous Systems &amp; Robotics</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Cyber-Physical Systems Security &amp; Resilience</span>
-            <span class="tag">Smart Mobility</span>
-            <span class="tag">Data Analytics</span>
-            <span class="tag">Connected &amp; Intelligent Transportation Systems</span>
-            <span class="tag">Neuromorphic Computing</span>
-            <span class="tag">Bio-inspired Autonomous Systems</span>
-          </div>
-        </div>
+        
       </div>
       <div class="about-sidebar">
         <div class="info-card">
@@ -763,6 +800,23 @@
           <div class="info-row"><span class="icon">📧</span> <a href="mailto:mdmhafi@gmail.com">mdmhafi@gmail.com</a></div>
           <div class="info-row"><span class="icon">🌐</span> <a href="https://scholar.google.com/citations?user=y4eSwyQAAAAJ" target="_blank">Google Scholar</a></div>
           <div class="info-row"><span class="icon">💻</span> <a href="https://github.com/mahfuz195" target="_blank">github.com/mahfuz195</a></div>
+        </div>
+        <div class="interests-sidebar research-interests-card">
+          <div class="ri-header">
+            <span class="ri-icon">◈</span>
+            <span class="ri-title">Research Interests</span>
+          </div>
+          <div class="ri-tags">
+            <span class="ri-tag ri-tag-blue">Machine Learning &amp; AI</span>
+            <span class="ri-tag ri-tag-navy">Connected &amp; Automated Vehicles</span>
+            <span class="ri-tag ri-tag-blue">Autonomous Systems &amp; Robotics</span>
+            <span class="ri-tag ri-tag-blue">Computer Vision</span>
+            <span class="ri-tag ri-tag-navy">Cyber-Physical Systems Security</span>
+            <span class="ri-tag ri-tag-blue">Smart Mobility</span>
+            <span class="ri-tag ri-tag-blue">Data Analytics</span>
+            <span class="ri-tag ri-tag-navy">Neuromorphic Computing</span>
+            <span class="ri-tag ri-tag-blue">Bio-inspired Autonomous Systems</span>
+          </div>
         </div>
       </div>
     </div>
