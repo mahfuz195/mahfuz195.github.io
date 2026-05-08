@@ -566,7 +566,7 @@
     justify-content: space-between; gap: 1rem;
     margin-bottom: 0.5rem; flex-wrap: wrap;
   }
-  .funding-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: #fff; line-height: 1.3; }
+  .funding-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--navy); line-height: 1.3; }
   .funding-amount {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem; font-weight: 700;
@@ -633,6 +633,23 @@
     background: rgba(46,117,182,0.35);
     color: #93c5fd;
     border: 1px solid rgba(96,165,250,0.3);
+  }
+
+
+  .funding-type-badge {
+    display: inline-block;
+    font-size: 0.62rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 0.15rem 0.55rem; border-radius: 3px;
+    margin-right: 0.5rem; vertical-align: middle;
+  }
+  .funding-type-badge.industry {
+    background: rgba(26,86,168,0.1); color: var(--blue);
+    border: 1px solid rgba(26,86,168,0.25);
+  }
+  .funding-type-badge.federal {
+    background: rgba(15,35,66,0.1); color: var(--navy);
+    border: 1px solid rgba(15,35,66,0.25);
   }
 
   /* ── ANIMATIONS ── */
@@ -982,14 +999,14 @@
 <!-- FUNDED RESEARCH -->
 <section id="funding">
   <div class="container">
-    <div class="section-label">Grants & Sponsored Research</div>
-    <h2>Funded Research</h2>
+    <div class="section-label">All Projects Funded</div>
+    <h2>Funded Research &amp; Grants</h2>
     <div class="funding-grid">
 
       <div class="funding-card">
         <div class="funding-header">
-          <div class="funding-title">Simu5G Integration into GM R&D Connected and Autonomous Vehicle Simulation Stack</div>
-          <div class="funding-amount">$200,000</div>
+          <div class="funding-title"><span class="funding-type-badge industry">Industry</span> Simu5G Integration into GM R&amp;D Connected and Autonomous Vehicle Simulation Stack</div>
+          <div class="funding-amount">$200K</div>
         </div>
         <div class="funding-meta">
           <span class="funding-badge badge-pi">Principal Investigator</span>
@@ -1003,7 +1020,7 @@
       <div class="funding-card" style="border-left-color: #60a5fa;">
         <div class="funding-header">
           <div class="funding-title">Lunar Mobility Vehicle — Autonomous Perception & Navigation System</div>
-          <div class="funding-amount">$5,000,000</div>
+          <div class="funding-amount">~$5M</div>
         </div>
         <div class="funding-meta">
           <span class="funding-badge badge-pi" style="background:rgba(96,165,250,0.2);color:#93c5fd;">Technical Lead · Perception & Navigation</span>
@@ -1021,8 +1038,8 @@
 
       <div class="funding-card" style="border-left-color: #a78bfa;">
         <div class="funding-header">
-          <div class="funding-title">Tier 1 University Transportation Center: Center for Connected Multimodal Mobility (C2M2)</div>
-          <div class="funding-amount">~$8,000,000</div>
+          <div class="funding-title"><span class="funding-type-badge federal">Federal</span> Tier 1 University Transportation Center: Center for Connected Multimodal Mobility (C2M2)</div>
+          <div class="funding-amount">~$8M</div>
         </div>
         <div class="funding-meta">
           <span class="funding-badge" style="background:rgba(167,139,250,0.2);color:#c4b5fd;">Proposal Co-Writer</span>
