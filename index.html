@@ -301,11 +301,12 @@
   .status-pending { background: rgba(251,191,36,0.15); color: #fbbf24; }
 
   /* ── AWARDS ── */
+  #awards { background: var(--white); }
   .awards-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
   }
   .award-card {
-    background: var(--white); border: 1px solid var(--border);
+    background: var(--bg); border: 1px solid var(--border);
     border-radius: 8px; padding: 1.3rem;
     transition: transform 0.2s, box-shadow 0.2s;
   }
@@ -419,7 +420,7 @@
 
 
   /* ── NEWS ── */
-  #news { background: var(--white); }
+  #news { background: var(--bg); }
   .news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .news-card {
     border: 1px solid var(--border); border-radius: 10px;
@@ -500,14 +501,22 @@
     flex-direction: column;
     height: 100%;
   }
+  .collab-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 0.75rem;
+  }
+  .collab-card-header-left { flex: 1; }
   .collab-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
   .collab-contacts { margin-top: auto; border-top: 1px solid var(--border); padding-top: 0.6rem; }
   .collab-flag-img {
-    height: 36px; width: auto;
+    height: 28px; width: auto;
     border-radius: 3px;
-    margin-bottom: 0.75rem;
     display: block;
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    flex-shrink: 0;
   }
   .collab-flag { font-size: 1.8rem; margin-bottom: 0.5rem; }
   .collab-uni {
@@ -537,19 +546,19 @@
 
 
   /* ── FUNDED RESEARCH ── */
-  #funding { background: var(--navy); }
-  #funding h2 { color: #fff; }
-  #funding .section-label { color: #f97316; }
+  #funding { background: var(--white); }
+  #funding h2 { color: var(--navy); }
+  #funding .section-label { color: var(--accent); }
   .funding-grid { display: flex; flex-direction: column; gap: 1.2rem; }
   .funding-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--bg);
+    border: 1px solid var(--border);
     border-left: 4px solid var(--accent);
     border-radius: 0 8px 8px 0;
     padding: 1.3rem 1.5rem;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
   }
-  .funding-card:hover { background: rgba(255,255,255,0.09); }
+  .funding-card:hover { background: #ede9e2; box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
   .funding-header {
     display: flex; align-items: flex-start;
     justify-content: space-between; gap: 1rem;
@@ -559,21 +568,21 @@
   .funding-amount {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem; font-weight: 700;
-    color: #34d399; white-space: nowrap; flex-shrink: 0;
+    color: var(--accent); white-space: nowrap; flex-shrink: 0;
   }
   .funding-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
   .funding-badge {
     font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.07em; padding: 0.2rem 0.6rem; border-radius: 3px;
   }
-  .badge-pi { background: rgba(232,96,28,0.25); color: #f97316; }
-  .badge-internal { background: rgba(96,165,250,0.2); color: #93c5fd; }
-  .funding-desc { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0.6rem; }
+  .badge-pi { background: rgba(232,96,28,0.12); color: #c24e0e; }
+  .badge-internal { background: rgba(26,86,168,0.1); color: var(--blue); }
+  .funding-desc { font-size: 0.88rem; color: #374151; line-height: 1.6; margin-bottom: 0.6rem; }
   .funding-partners {
-    font-size: 0.78rem; color: rgba(255,255,255,0.45);
+    font-size: 0.78rem; color: var(--muted);
     font-style: italic;
   }
-  .funding-partners strong { color: rgba(255,255,255,0.65); font-style: normal; }
+  .funding-partners strong { color: var(--navy); font-style: normal; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -728,24 +737,10 @@
     <h2>Research Overview</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I am a robotics and machine learning engineer with 6+ years of experience across autonomous vehicles, robotic perception, sensor fusion, motion planning, and embedded systems. My research bridges the gap between deep learning theory and real-world deployment on physical robotic platforms.</p>
+        <p>I am a researcher and engineer with 6+ years of experience across autonomous vehicles, robotic perception, sensor fusion, motion planning, and embedded systems. My research bridges the gap between deep learning theory and real-world deployment on physical robotic platforms.</p>
         <p>My doctoral work at Clemson University focused on vision-based navigation for autonomous vehicles and cybersecurity for connected vehicle infrastructure. Since then, I have worked across the full AV stack at General Motors R&D and Defense, MicroVision, and Imec USA R&D — filing 18+ patents and publishing in IEEE T-ITS, IEEE TVT, IEEE Access, and top transportation venues.</p>
         <p>I am passionate about STEM education and have designed K-12 courses in Python programming, autonomous vehicle simulation, and robotics — supported by the U.S. DOT Center for Connected Multimodal Mobility.</p>
-        <div class="interests-block">
-          <h3>Research Interests</h3>
-          <div class="tag-cloud">
-            <span class="tag">Machine Learning &amp; Artificial Intelligence</span>
-            <span class="tag">Connected and Automated Vehicles</span>
-            <span class="tag">Autonomous Systems &amp; Robotics</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Cyber-Physical Systems Security &amp; Resilience</span>
-            <span class="tag">Smart Mobility</span>
-            <span class="tag">Data Analytics</span>
-            <span class="tag">Connected &amp; Intelligent Transportation Systems</span>
-            <span class="tag">Neuromorphic Computing</span>
-            <span class="tag">Bio-inspired Autonomous Systems</span>
-          </div>
-        </div>
+
       </div>
       <div class="about-sidebar">
         <div class="info-card">
@@ -755,13 +750,19 @@
           <div class="info-row"><span class="icon">🌐</span> <a href="https://scholar.google.com/citations?user=y4eSwyQAAAAJ" target="_blank">Google Scholar</a></div>
           <div class="info-row"><span class="icon">💻</span> <a href="https://github.com/mahfuz195" target="_blank">github.com/mahfuz195</a></div>
         </div>
+        
         <div class="info-card">
-          <h4>Technical Stack</h4>
+          <h4>Research Interests</h4>
           <div class="tag-cloud">
-            <span class="tag">Python</span><span class="tag">C++</span>
-            <span class="tag">PyTorch</span><span class="tag">ROS/ROS2</span>
-            <span class="tag">CUDA</span><span class="tag">OpenCV</span>
-            <span class="tag">TensorRT</span><span class="tag">Docker</span>
+            <span class="tag">Machine Learning &amp; AI</span>
+            <span class="tag">Connected &amp; Automated Vehicles</span>
+            <span class="tag">Autonomous Systems &amp; Robotics</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Cyber-Physical Systems Security</span>
+            <span class="tag">Smart Mobility</span>
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Neuromorphic Computing</span>
+            <span class="tag">Bio-inspired Autonomous Systems</span>
           </div>
         </div>
       </div>
@@ -1187,10 +1188,14 @@
     <div class="collab-grid">
 
       <div class="collab-card">
+      <div class="collab-card-header">
+        <div class="collab-card-header-left">
+          <div class="collab-uni">University of Pisa</div>
+          <div class="collab-country">Pisa, Italy</div>
+        </div>
         <img src="https://flagcdn.com/w80/it.png" alt="Italy" class="collab-flag-img">
-        <div class="collab-uni">University of Pisa</div>
-        <div class="collab-country">Pisa, Italy</div>
-        <div class="collab-project">Simu5G Project</div>
+      </div>
+      <div class="collab-project">Simu5G Project</div>
         <div class="collab-desc">Collaborative research on establishing 5G communication networks and evaluating 5G communication performance in connected vehicle infrastructure. Work involves integration of Simu5G — a system-level simulator for 5G NR and LTE networks — into connected and automated vehicle testbed environments.</div>
         <div class="collab-contacts">
           <div class="collab-contact-label">Collaborators</div>
@@ -1201,10 +1206,14 @@
 
 
       <div class="collab-card">
+      <div class="collab-card-header">
+        <div class="collab-card-header-left">
+          <div class="collab-uni">University of Ottawa</div>
+          <div class="collab-country">Ottawa, Ontario, Canada</div>
+        </div>
         <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="collab-flag-img">
-        <div class="collab-uni">University of Ottawa</div>
-        <div class="collab-country">Ottawa, Ontario, Canada</div>
-        <div class="collab-project">RL-Based AV Validation & Verification</div>
+      </div>
+      <div class="collab-project">RL-Based AV Validation & Verification</div>
         <div class="collab-desc">Collaborative research on evaluating and developing reinforcement learning algorithms for autonomous vehicle systems, with a focus on performance validation and verification. Work explores RL-driven testing strategies to systematically expose edge cases and failure modes in AV software stacks under realistic and adversarial scenarios.</div>
         <div class="collab-contacts">
           <div class="collab-contact-label">Collaborator</div>
@@ -1213,10 +1222,14 @@
       </div>
 
       <div class="collab-card">
+      <div class="collab-card-header">
+        <div class="collab-card-header-left">
+          <div class="collab-uni">University of Alabama</div>
+          <div class="collab-country">Tuscaloosa, Alabama, USA</div>
+        </div>
         <img src="https://flagcdn.com/w80/us.png" alt="United States" class="collab-flag-img">
-        <div class="collab-uni">University of Alabama</div>
-        <div class="collab-country">Tuscaloosa, Alabama, USA</div>
-        <div class="collab-project">Quantum Security for Blockchain-Based VANETs</div>
+      </div>
+      <div class="collab-project">Quantum Security for Blockchain-Based VANETs</div>
         <div class="collab-desc">Collaborative research investigating the implications of quantum computing on the security of blockchain-based Vehicular Ad-Hoc Networks (VANETs). The study demonstrates how quantum Shor's Algorithm can break traditional cryptographic techniques used in VANETs, exposes critical vulnerabilities in existing blockchain security frameworks, and proposes post-quantum countermeasures to protect V2X communications against emerging quantum threats. Published in <em>IEEE Transactions on Intelligent Transportation Systems</em> (Impact Factor: 7.9).</div>
         <div class="collab-contacts">
           <div class="collab-contact-label">Collaborator</div>
@@ -1226,10 +1239,14 @@
       </div>
 
       <div class="collab-card">
+      <div class="collab-card-header">
+        <div class="collab-card-header-left">
+          <div class="collab-uni">University of Michigan</div>
+          <div class="collab-country">Ann Arbor, Michigan, USA</div>
+        </div>
         <img src="https://flagcdn.com/w80/us.png" alt="United States" class="collab-flag-img">
-        <div class="collab-uni">University of Michigan</div>
-        <div class="collab-country">Ann Arbor, Michigan, USA</div>
-        <div class="collab-project">Multi-Sensor Fusion for Autonomous Systems</div>
+      </div>
+      <div class="collab-project">Multi-Sensor Fusion for Autonomous Systems</div>
         <div class="collab-desc">Collaborative research on advanced sensor fusion architectures integrating LiDAR, camera, and radar modalities for robust perception in autonomous vehicle systems. Work focuses on developing and validating multi-sensor fusion algorithms for reliable real-world operation, including adverse weather conditions tested at the University of Michigan's MCity vehicle testing facility.</div>
         <div class="collab-contacts">
           <div class="collab-contact-label">Collaborator</div>
@@ -1238,10 +1255,14 @@
       </div>
 
       <div class="collab-card">
+      <div class="collab-card-header">
+        <div class="collab-card-header-left">
+          <div class="collab-uni">Ghent University</div>
+          <div class="collab-country">Ghent, Belgium</div>
+        </div>
         <img src="https://flagcdn.com/w80/be.png" alt="Belgium" class="collab-flag-img">
-        <div class="collab-uni">Ghent University</div>
-        <div class="collab-country">Ghent, Belgium</div>
-        <div class="collab-project">Multi-Sensor Fusion for Autonomous Systems</div>
+      </div>
+      <div class="collab-project">Multi-Sensor Fusion for Autonomous Systems</div>
         <div class="collab-desc">Joint research on sensor fusion methodologies for autonomous perception systems, combining complementary expertise in embedded sensor hardware, deep learning-based fusion architectures, and real-world validation. Collaboration spans algorithm design, benchmarking on multi-modal datasets, and deployment strategies for production-grade autonomous systems.</div>
         <div class="collab-contacts">
           <div class="collab-contact-label">Collaborator</div>
