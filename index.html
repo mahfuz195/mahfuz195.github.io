@@ -37,7 +37,7 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: flex-end;
     height: 60px;
   }
   .nav-name {
@@ -475,7 +475,7 @@
   }
   .news-card-desc { font-size: 0.87rem; color: #4b5563; line-height: 1.6; flex: 1; }
   .news-card-footer {
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: flex-end;
     margin-top: 1.2rem; padding-top: 0.9rem;
     border-top: 1px solid var(--border);
   }
@@ -783,25 +783,30 @@
           <div class="info-row"><span class="icon">🌐</span> <a href="https://scholar.google.com/citations?user=y4eSwyQAAAAJ" target="_blank">Google Scholar</a></div>
           <div class="info-row"><span class="icon">💻</span> <a href="https://github.com/mahfuz195" target="_blank">github.com/mahfuz195</a></div>
         </div>
-        <div class="interests-sidebar research-interests-card">
-          <div class="ri-header">
-            <span class="ri-icon">◈</span>
-            <span class="ri-title">Research Interests</span>
-          </div>
-          <div class="ri-tags">
-            <span class="ri-tag ri-tag-blue">Machine Learning &amp; AI</span>
-            <span class="ri-tag ri-tag-navy">Connected &amp; Automated Vehicles</span>
-            <span class="ri-tag ri-tag-blue">Autonomous Systems &amp; Robotics</span>
-            <span class="ri-tag ri-tag-blue">Computer Vision</span>
-            <span class="ri-tag ri-tag-navy">Cyber-Physical Systems Security</span>
-            <span class="ri-tag ri-tag-blue">Smart Mobility</span>
-            <span class="ri-tag ri-tag-blue">Data Analytics</span>
-            <span class="ri-tag ri-tag-navy">Neuromorphic Computing</span>
-            <span class="ri-tag ri-tag-blue">Bio-inspired Autonomous Systems</span>
-          </div>
-        </div>
       </div>
     </div>
+  </div>
+
+  <div class="container" style="margin-top: 2.5rem;">
+    <div class="research-interests-card" style="border-radius: 10px; padding: 1.4rem 1.8rem;">
+      <div class="ri-header">
+        <span class="ri-icon">◈</span>
+        <span class="ri-title">Research Interests</span>
+      </div>
+      <div class="ri-tags">
+        <span class="ri-tag ri-tag-blue">Machine Learning &amp; Artificial Intelligence</span>
+        <span class="ri-tag ri-tag-blue">Connected and Automated Vehicles</span>
+        <span class="ri-tag ri-tag-blue">Autonomous Systems &amp; Robotics</span>
+        <span class="ri-tag ri-tag-blue">Computer Vision</span>
+        <span class="ri-tag ri-tag-blue">Cyber-Physical Systems Security &amp; Resilience</span>
+        <span class="ri-tag ri-tag-blue">Smart Mobility</span>
+        <span class="ri-tag ri-tag-blue">Data Analytics</span>
+        <span class="ri-tag ri-tag-blue">Connected &amp; Intelligent Transportation Systems</span>
+        <span class="ri-tag ri-tag-blue">Neuromorphic Computing</span>
+        <span class="ri-tag ri-tag-blue">Bio-inspired Autonomous Systems</span>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
